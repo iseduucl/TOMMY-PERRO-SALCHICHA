@@ -1,33 +1,32 @@
 
 
-def suma(a,b):
+def multiplicacion(a,b):
+    multiplicar = a * b
 
-    sumar = a + b
+    print(f"El resultado de la multiplicacion de {a} * {b} es {multiplicar}")
+    
+    return(multiplicar)
 
-    print(f"La suma de {a} + {b} es = {sumar}")
+num1 = int(input("Ingrese un numero: "))
+num2 = int(input("Ingrese otro numero: "))
 
-num1 = int(input("Ingresa un numero: "))
-num2 = int(input("Ingresa otro numero: "))
+multiplicacion(num1,num2)
 
-suma(num1,num2)
 
-# SIN ARGUMENTO Y SIN RETORNO
+def tiene_numero(texto):
+    numerico = False
+    for caracter in texto:
+        if caracter.isdigit():
+            numerico = True
+    return(numerico)
 
-def suma():
-    num1 = 5
-    num2 = 8
+nombre = input("Ingresa tu nombre sin numeros: ")
 
-    return(num1 + num2)
+if tiene_numero(nombre) == True:
+    print("Acceso denegado, el nombre no puede contener numeros! ")
+else:
+    print("Acceso concedido! ")
 
-print(f"La suma es: ",suma())
 
-def suma(a,b):
-    sumar = a + b
-    return(sumar)
-
-num1 = int(input("Ingresa un numero: "))
-num2 = int(input("Ingresa otro numero: "))
-
-print("El resultado es: ",suma(num1,num2))
 
 
