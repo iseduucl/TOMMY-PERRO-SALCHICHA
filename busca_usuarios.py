@@ -21,7 +21,7 @@ def error_letra(texto):
             tiene_letra = True
     return(tiene_letra)
 
-def ingr_user():
+def ingr_user(usuarios):
     while True:
         espacios()
         nombre = input("Ingrese nombre del usuario: ").strip()
@@ -58,12 +58,7 @@ def ingr_user():
 
 
     
-    usuario = {
-        "sexo":sexo,
-        "contraseña":contra
-    }
-    
-    usuarios[nombre] = usuario
+    usuarios[nombre] = [sexo,contra]
     espacios()
     print("Usuario registrado correctamente! ")
 
